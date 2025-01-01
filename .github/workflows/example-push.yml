@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: ./action.yml
+      - uses: ./
         with:
           channel_access_token: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           message: "test message"
