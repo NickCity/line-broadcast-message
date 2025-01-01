@@ -1,0 +1,15 @@
+name: LINE Notify example-push
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./action.yml
+        with:
+          channel_access_token: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          message: "test message"

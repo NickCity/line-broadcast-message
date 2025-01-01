@@ -2,16 +2,24 @@ const core = require('@actions/core');
 const request = require('request');
 
 try {
-  const token = core.getInput('access_token');
+  const token = core.getInput('channel_access_token');
   const message = core.getInput('message');
 
-  request.post('https://notify-api.line.me/api/notify', {
-    auth: {
-      'bearer': token
+  const messages = [
+    {
+      type: 'text',
+      text: message,
     },
-    form: {
-      message,
+  ]
+
+  request.post('https://api.line.me/v2/bot/message/broadcast', {
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
     },
+    body: JSON.stringify({
+      messages,
+    }),
   })
   .on('response', function (response) {
     response.setEncoding('utf8');
