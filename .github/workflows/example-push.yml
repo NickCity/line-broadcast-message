@@ -8,8 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: LINE Broadcast Message
+        uses: NickCity/line-message-api@use-message-api
         with:
           channel_access_token: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           message: "test message"
