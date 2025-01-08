@@ -1,15 +1,18 @@
-name: LINE Notify example
+name: LINE Broadcast Message Example
 on:
-  issues:
-    types: opened
+  push:
+    branches:
+      - 'example'
 jobs:
-  notify:
+  broadcast:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: snow-actions/line-notify@v1.0.0
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: LINE Broadcast Message
+        uses: NickCity/line-broadcast-message@v1.0.0
         with:
-          access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
-          message: |
-            Issue is opened.
-            #${{ github.event.issue.number }}: ${{ github.event.issue.title }}
-            ${{ github.event.issue.html_url }}
+          channel_access_token: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          message: "some message"

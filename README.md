@@ -1,17 +1,11 @@
-> [!IMPORTANT]
-> [End of service for LINE Notify](https://notify-bot.line.me/closing-announce)
-> 
-> This action will be archived due to the end of service for LINE Notify.
-
-# LINE Notify
-
-[LINE Notify](https://notify-bot.line.me/) for GitHub Actions.
+# LINE Broadcast Message
+Because the LINE Notify service is deprecated on 2025-03-31, this action use [LINE Broadcast Message](https://developers.line.biz/en/reference/messaging-api/#send-broadcast-message) instead of LINE Notify.
 
 ## Usage
 ```yml
-- uses: snow-actions/line-notify@v1.2.0
+- uses: NickCity/line-broadcast-message@v1.0.0
   with:
-    access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
+    channel_access_token: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
     message: some message
 ```
 

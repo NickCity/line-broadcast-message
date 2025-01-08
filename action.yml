@@ -1,8 +1,8 @@
-name: LINE Notify
-description: LINE Notify for GitHub Actions (deprecated)
+name: LINE Broadcast Message
+description: LINE Broadcast Message for GitHub Actions
 inputs:
-  access_token:
-    description: LINE Access Token
+  channel_access_token:
+    description: LINE Channel Access Token
     required: true
   message:
     description: Message
