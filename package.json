@@ -1,11 +1,11 @@
 {
-  "name": "line-notify",
-  "version": "1.2.0",
-  "description": "LINE Notify for GitHub Actions",
+  "name": "line-broadcast-message",
+  "version": "1.0.0",
+  "description": "LINE Broadcast Message for GitHub Actions",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snow-actions/line-notify.git"
+    "url": "git+https://github.com/NickCity/line-broadcast-message.git"
   },
   "keywords": [
     "GitHub",
@@ -15,11 +15,11 @@
   "author": "GitHub",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/snow-actions/line-notify/issues"
+    "url": "https://github.com/NickCity/line-broadcast-message/issues"
   },
-  "homepage": "https://github.com/snow-actions/line-notify#readme",
+  "homepage": "https://github.com/NickCity/line-broadcast-message#readme",
   "dependencies": {
-    "@actions/core": "^1.9.1",
-    "request": "^2.88.0"
+    "@actions/core": "1.9.1",
+    "request": "2.88.0"
   }
 }
