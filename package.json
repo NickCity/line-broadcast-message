@@ -2,6 +2,7 @@
   "name": "line-broadcast-message",
   "version": "1.0.0",
   "description": "LINE Broadcast Message for GitHub Actions",
+  "type": "module",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -19,7 +20,6 @@
   },
   "homepage": "https://github.com/NickCity/line-broadcast-message#readme",
   "dependencies": {
-    "@actions/core": "1.9.1",
-    "request": "2.88.0"
+    "@actions/core": "3.0.1"
   }
 }
