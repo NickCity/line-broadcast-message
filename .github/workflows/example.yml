@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: LINE Broadcast Message
-        uses: NickCity/line-broadcast-message@v1.0.0
+        uses: NickCity/line-broadcast-message@v2.0.0
         with:
           channel_access_token: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           message: "some message"

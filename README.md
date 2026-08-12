@@ -3,7 +3,7 @@ Because the LINE Notify service is deprecated on 2025-03-31, this action use [LI
 
 ## Usage
 ```yml
-- uses: NickCity/line-broadcast-message@v1.0.0
+- uses: NickCity/line-broadcast-message@v2.0.0
   with:
     channel_access_token: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
     message: some message
